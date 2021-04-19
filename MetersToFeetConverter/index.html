@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="text-align: center;width: 50%">
+    <tr>
+        <th>Feet</th>
+        <th>Meters</th>
+        <th>Meters</th>
+        <th>Feet</th>
+    </tr>
+    <tr>
+        <td><input type="number" min="0" oninput="feetConvert(this.value)" onchange="feetConvert(this.value)"></td>
+        <td><span id="rs1"></span></td>
+        <td><input type="number" min="0" oninput="metersConvert(this.value)" onchange="metersConvert(this.value)"></td>
+        <td><span id="rs2"></span></td>
+    </tr>
+</table>
+<script>
+function feetConvert(n){
+    n=parseFloat(n);
+    document.getElementById('rs1').innerHTML=(n*0.305);
+}
+function metersConvert(n2){
+    n2=parseFloat(n2);
+    document.getElementById('rs2').innerHTML=(3.279*n2);
+}
+</script>
+</body>
+</html>
